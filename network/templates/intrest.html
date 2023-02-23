@@ -82,30 +82,42 @@
                             search
                             </span>
                     </div>
-                    <div class="container">
+                    <div class="container" >
                       <ul class="cbox-tags">
+
+                        <div style="display: flex; ">
+
+
+
                         {% for intr in intr %}
                         {% if intr.intrest_name == "#Article" %}
-                          <li><input type="checkbox" class="chkbx" id="checkbox1"   >
-                          <label for="checkbox1">
+
+
+                          <li> 
+                          
                            {% if button_texta == "Follow" %}
                           
-                            <a class="" href="{% url 'intrest_follow' intr.id %}" style="text-decoration: none;color: black;">#Article</a>
+                           <a  href="{% url 'intrest_follow' intr.id %}" ><input type="checkbox" class="chkbx" id="checkbox1" ><label for="checkbox1">#Article</label></a>
                             {% else %}
-                            <a href="{% url 'intrest_unfollow' intr.id %}" class="btn btn btn-primary" style="background-color: rgb(121, 194, 236);border-radius: 15px;border-color: black;">#Article</a>
+                            <a href="{% url 'intrest_unfollow' intr.id %}" ><input type="checkbox" class="chkbx" id="checkbox1" ><label for="checkbox1">#Article </label></a>
                             {% endif %}	
-                          </label></li>
+                          </li>
+
+
                           {% endif %}
                           {% endfor %}
+
+
+
                        
                         {% for intr in intr %}
                         {% if intr.intrest_name == "#Market Research" %}
                           <li><input type="checkbox" class="chkbx" id="checkbox2" >
                           <label for="checkbox2">
                            {% if button_textf == "Follow" %}
-                            <a href="{% url 'intrest_follow' intr.id %}" style="text-decoration: none;color: black;">#Market Research</a>
+                            <a class="chkbx" href="{% url 'intrest_follow' intr.id %}" style="text-decoration: none;color: black;">#Market Research</a>
                             {% else %}
-                            <a href="{% url 'intrest_unfollow' intr.id %}" class="btn btn btn-primary" style="background-color: rgb(121, 194, 236);border-radius: 15px;border-color: black;">#Market Research</a>
+                            <a class="chkbx" href="{% url 'intrest_unfollow' intr.id %}" class="btn btn btn-primary" style="background-color: rgb(121, 194, 236);border-radius: 15px;border-color: black; text-decoration: none;color: black;">#Market Research</a>
   
                             {% endif %}	
                           </label></li>
@@ -120,14 +132,14 @@
                              {% if button_textc == "Follow" %}
                               <a href="{% url 'intrest_follow' intr.id %}" style="text-decoration: none;color: black;">#Case Study</a>
                               {% else %}
-                              <a href="{% url 'intrest_unfollow' intr.id %}" class="btn btn btn-primary" style="background-color: rgb(121, 194, 236);border-radius: 15px;border-color: black;">#Case Study</a>
+                              <a href="{% url 'intrest_unfollow' intr.id %}" class="btn btn btn-primary" style="background-color: rgb(121, 194, 236);border-radius: 15px;border-color: black; text-decoration: none;color: black;">#Case Study</a>
   
                               {% endif %}	
                             </label></li>
                             {% endif %}
                             {% endfor %}
-  
-                            
+                          </div>
+                          <div style="display: flex; ">
   
                             {% for intr in intr %}
                             {% if intr.intrest_name == "#Book" %}
@@ -136,7 +148,7 @@
                                {% if button_textb == "Follow" %}
                                 <a href="{% url 'intrest_follow' intr.id %}" style="text-decoration: none;color: black;">#Book</a>
                                 {% else %}
-                                <a href="{% url 'intrest_unfollow' intr.id %}" class="btn btn btn-primary" style="background-color: rgb(121, 194, 236);border-radius: 15px;border-color: black;">#Book</a>
+                                <a href="{% url 'intrest_unfollow' intr.id %}" class="btn btn btn-primary" style="background-color: rgb(121, 194, 236);border-radius: 15px;border-color: black; text-decoration: none;color: black;">#Book</a>
   
                                 {% endif %}	
                               </label></li>
@@ -152,7 +164,7 @@
                                  {% if button_textd == "Follow" %}
                                   <a href="{% url 'intrest_follow' intr.id %}" style="text-decoration: none;color: black;">#Education</a>
                                   {% else %}
-                                  <a href="{% url 'intrest_unfollow' intr.id %}" class="btn btn btn-primary" style="background-color: rgb(121, 194, 236);border-radius: 15px;border-color: black;">#Education</a>
+                                  <a href="{% url 'intrest_unfollow' intr.id %}" class="btn btn btn-primary" style="background-color: rgb(121, 194, 236);border-radius: 15px;border-color: black; text-decoration: none;color: black;">#Education</a>
   
                                   {% endif %}	
                                 </label></li>
@@ -165,17 +177,36 @@
                                 {% for intr in intr %}
                                 {% if intr.intrest_name == "#Interviews" %}
                                   <li><input type="checkbox" class="chkbx" id="checkbox6"   >
-                                  <label for="checkbox16>
+                                  <label for="checkbox6">
                                    {% if button_texte == "Follow" %}
                                     <a href="{% url 'intrest_follow' intr.id %}" style="text-decoration: none;color: black;">#Interviews</a>
                                     {% else %}
-                                    <a href="{% url 'intrest_unfollow' intr.id %}" class="btn btn btn-primary" style="background-color: rgb(121, 194, 236);border-radius: 15px;border-color: black;">#Interviews</a>
+                                    <a href="{% url 'intrest_unfollow' intr.id %}" class="btn btn btn-primary" style="background-color: rgb(121, 194, 236);border-radius: 15px;border-color: black; text-decoration: none;color: black;">#Interviews</a>
   
                                     {% endif %}	
                                   </label></li>
                                   {% endif %}
                                   {% endfor %}
+
+                                  {% for intr in intr %}
+                                      {% if intr.intrest_name == "#Poem" %}
+                                        <li><input type="checkbox" class="chkbx" id="checkbox8"   >
+                                        <label for="checkbox8">
+                                         {% if button_texth == "Follow" %}
+                                          <a href="{% url 'intrest_follow' intr.id %}" style="text-decoration: none;color: black;">#Poem</a>
+                                          {% else %}
+                                          <a href="{% url 'intrest_unfollow' intr.id %}" class="btn btn btn-primary" style="background-color: rgb(121, 194, 236);border-radius: 15px;border-color: black;text-decoration: none;color: black;">#Poem</a>
   
+                                          {% endif %}	
+                                        </label></li>
+                                        {% endif %}
+                                        {% endfor %} 
+
+
+
+                                  
+                          </div>
+                          <div style="display: flex; ">
   
   
   
@@ -189,7 +220,7 @@
                                        {% if button_textg == "Follow" %}
                                         <a href="{% url 'intrest_follow' intr.id %}" style="text-decoration: none;color: black;">#Observation</a>
                                         {% else %}
-                                        <a href="{% url 'intrest_unfollow' intr.id %}" class="btn btn btn-primary" style="background-color: rgb(121, 194, 236);border-radius: 15px;border-color: black;">#Observation</a>
+                                        <a href="{% url 'intrest_unfollow' intr.id %}" class="btn btn btn-primary" style="background-color: rgb(121, 194, 236);border-radius: 15px;border-color: black; text-decoration: none;color: black;">#Observation</a>
   
                                         {% endif %}	
                                       </label></li>
@@ -197,19 +228,7 @@
                                       {% endfor %}
   
                                       
-                                      {% for intr in intr %}
-                                      {% if intr.intrest_name == "#Poem" %}
-                                        <li><input type="checkbox" class="chkbx" id="checkbox8"   >
-                                        <label for="checkbox8">
-                                         {% if button_texth == "Follow" %}
-                                          <a href="{% url 'intrest_follow' intr.id %}" style="text-decoration: none;color: black;">#Poem</a>
-                                          {% else %}
-                                          <a href="{% url 'intrest_unfollow' intr.id %}" class="btn btn btn-primary" style="background-color: rgb(121, 194, 236);border-radius: 15px;border-color: black;text-decoration: none;color: black;">#Poem</a>
-  
-                                          {% endif %}	
-                                        </label></li>
-                                        {% endif %}
-                                        {% endfor %}    
+                                         
 
 
 
@@ -230,17 +249,18 @@
                                           
                                         {% for intr in intr %}
                                         {% if intr.intrest_name == "#Work & Business" %}
-                                          <li>
-                                            
-                                            <input type="checkbox" class="chkbx" id="checkbox10"   >
-                                          <label for="checkbox10">
-                                           #Wo & Business</a>
+                                          <li><input type="checkbox" class="chkbx" id="checkbox11"   >
+                                          <label for="checkbox11">
+                                           {% if button_textj == "Follow" %}
+                                            <a href="{% url 'intrest_follow' intr.id %}" style="text-decoration: none;color: black;">#Work & Business</a>
                                             {% else %}
-                                            <a href="{% url 'intrest_unfollow' intr.id %}" class="btn btn btn-primary" >#Wo & Business</a>
+                                            <a href="{% url 'intrest_unfollow' intr.id %}" class="btn btn btn-primary" style="background-color: rgb(121, 194, 236);border-radius: 15px;border-color: black;text-decoration: none;color: black;">#Work & Business</a>
                                             {% endif %}	
                                           </label></li>
                                           {% endif %}
                                           {% endfor %}    
+
+                                        </div>
                       </ul>
                     </div>
                     <div class="selection-wrapper">
